@@ -6,6 +6,7 @@ public class Rotation : MonoBehaviour {
     public float speed = 1;
     public float speed2 = 0.5f;
 	public GameObject text;
+	public warrior w;
     // Use this for initialization
     void Start () {
 		
@@ -19,7 +20,7 @@ public class Rotation : MonoBehaviour {
 	private void OnTriggerEnter(Collider other)
 	{
 		text.SetActive(true);
-		
+		w.are_arma = true;
 	}
 
 	private void OnTriggerExit(Collider other)

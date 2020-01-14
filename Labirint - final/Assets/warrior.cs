@@ -10,18 +10,23 @@ public class warrior : MonoBehaviour
     public GameObject text;
     public Animator animator;
     private float movement = 0f;
-        // Use this for initialization
+    public bool are_arma = false;
+    
+
+    // Use this for initialization
     void Start()
     {
 
     }
+
+    
 
     // Update is called once per frame
     void FixedUpdate()
     {
         movement = Input.GetAxisRaw("Vertical") * moveSpeed;
         animator.SetFloat("Speed", Mathf.Abs(movement));
-        if (Input.GetKeyDown(KeyCode.W))
+        if (animator.GetFloat("Speed")>0.1)
         {
             text.SetActive(false);
         }
@@ -36,4 +41,6 @@ public class warrior : MonoBehaviour
 
 
     }
+
+  
 }
