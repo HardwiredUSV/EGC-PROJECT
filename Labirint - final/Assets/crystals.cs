@@ -7,6 +7,7 @@ public class crystals : MonoBehaviour
 
     public GameObject text1, text2, text3;
     static int nr_cristale=0;
+    int lifetime = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,20 +20,25 @@ public class crystals : MonoBehaviour
         
     }
 
+    
+
     private void OnTriggerEnter(Collider other)
     {
         nr_cristale++;
         if (nr_cristale == 1)
         {
             text1.SetActive(true);
+            Destroy(text1, lifetime);
         }
         if (nr_cristale == 2)
         {
             text2.SetActive(true);
+            Destroy(text2, lifetime);
         }
         if (nr_cristale == 3)
         {
             text3.SetActive(true);
+            Destroy(text3, lifetime);
         }
     }
 
@@ -40,8 +46,6 @@ public class crystals : MonoBehaviour
     {
         
         gameObject.SetActive(false);
-        text1.SetActive(false);
-        text2.SetActive(false);
-        text3.SetActive(false);
+        
     }
 }
