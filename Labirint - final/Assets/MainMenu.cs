@@ -10,4 +10,17 @@ public class MainMenu : MonoBehaviour
     {
         Application.LoadLevel(scenename); 
     }
+
+    public void quitapp()
+    {
+        Application.Quit();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKey("escape"))
+        {
+            Application.LoadLevel("ESCmenu");
+        }
+    }
 }

@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/ESCmenu.unity
+    guid: 0578625076cdbe940b918654816abacd
+  - enabled: 1
+    path: Assets/Scenes/SampleScene2.unity
+    guid: 33b59b2ef2d217d4887e98f9e84dca64
+  - enabled: 1
+    path: Assets/Scenes/AI-PIERDUT.unity
+    guid: 9bbed769986a03f41842445b2b14c167
   m_configObjects: {}

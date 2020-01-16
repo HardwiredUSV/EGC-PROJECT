@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class enemy : MonoBehaviour
 {
@@ -16,8 +16,16 @@ public class enemy : MonoBehaviour
 
     // Update is called once per frame
 
+    private void Start()
+    {
+        if (SceneManager.GetActiveScene().name == "SampleScene2")
+            urmareste = false;
+    }
+
     private void Update()
     {
+        
+
         if(urmareste)
         {
             movement = Input.GetAxisRaw("Vertical") * w.moveSpeed;
@@ -46,8 +54,7 @@ public class enemy : MonoBehaviour
 
             else
             {
-                w.text2.SetActive(true);
-                Destroy(w.text3, lifeTime);
+                SceneManager.LoadScene("AI-PIERDUT");
             }
         }
     }
